@@ -1,14 +1,16 @@
 Bravo
 -----
 
+## What it does..
+
 Remove white fringe pixels for alpha blended textures in Unity
 
-# Set up
+## Set up
 
 pip install -r requirements.ini
 
 
-# Usages
+## Usages
 
 1. Copy all you pictures into *input/* folder
 2. python fixalpha.py
