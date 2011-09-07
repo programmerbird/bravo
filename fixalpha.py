@@ -3,7 +3,10 @@
 
 import sys
 import os
-from PIL import Image 
+try:
+	from PIL import Image 
+except ImportError:
+	import Image
 from ui import ProgressBar
 
 def remove_alpha(im):	
@@ -46,10 +49,10 @@ class ImageTable(object):
 		w = self.width
 		h = self.height
 		for m in xrange(x-radius, x+radius+1):
+			if m < 0: continue
+			if m >= w: continue
 			for n in xrange(y-radius, y+radius+1):
-				if m < 0: continue
 				if n < 0: continue
-				if m >= w: continue
 				if n >= h: continue
 				if m == x and n == y: continue
 				yield (m, n)

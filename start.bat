@@ -1,0 +1,1 @@
+python fixalpha.py
